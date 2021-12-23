@@ -9,7 +9,7 @@ const app = express();
 
 app.use(express.json());
 
-/* Mise en place autorisation headers */
+/* Mise en place reponses headers */
 app.use((req, res, next) => {
   res.setHeader("Access-Control-Allow-Origin", "*");
   res.setHeader(
@@ -27,6 +27,5 @@ app.use((req, res, next) => {
 app.use("/images", express.static(path.join(__dirname, "images")));
 app.use("/api/auth", userRoutes);
 app.use("/api/sauces", sauceRoutes);
-// app.get("*", (req, res) => res.status(501).send(`Nothing is hidden here!`));
 
 module.exports = app;

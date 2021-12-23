@@ -5,10 +5,10 @@ const dotenv = require("dotenv").config({ encoding: "latin1" });
 
 /* Connection BDD mongoose */
 mongoose
-  .connect(
-    "mongodb+srv://admin:0cr-P6@cluster0.obbn2.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
-    { useNewUrlParser: true, useUnifiedTopology: true }
-  )
+  .connect(process.env.DBCONNECT, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  })
   // Demarrage serveur
   .then(() =>
     app.listen(process.env.SERVER_PORT, () => {
