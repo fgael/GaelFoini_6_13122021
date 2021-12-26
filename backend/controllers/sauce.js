@@ -117,9 +117,6 @@ exports.getAllSauce = (req, res, next) => {
 // Regle likeDislikeSauce : Like = 1 _ Dislike = -1 _ Pas de vote = 0
 exports.likeDislikeSauce = (req, res, next) => {
   let likeDislike = parseInt(req.body.like);
-  if (!likeDislike) {
-    return res.json(400).json({ message: "Missing Parameter" });
-  }
   Sauce.findOne({
     // id de la sauce
     _id: req.params.id,

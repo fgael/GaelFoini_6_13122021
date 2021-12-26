@@ -26,7 +26,6 @@ exports.signup = (req, res, next) => {
 /* Controleur login */
 exports.login = (req, res, next) => {
   // Verification utilisateur existant
-  console.log(req.body);
   User.findOne({ email: req.body.email })
     .then((user) => {
       if (!user) {

@@ -23,6 +23,24 @@ app.use((req, res, next) => {
   next();
 });
 
+/* Securite en tete */
+const helmet = require("helmet");
+
+app.use(helmet());
+
+/* RateLimit */
+const rateLimit = require("express-rate-limit");
+
+app.use(
+  rateLimit({
+    windowMs: 15 * 60 * 1000,
+    max: 100,
+    message:
+      "Vous avez effectué plus de 100 requêtes dans une limite de 15 minutes!",
+    headers: true,
+  })
+);
+
 /* Mise en place du routage */
 app.use("/images", express.static(path.join(__dirname, "images")));
 app.use("/api/auth", userRoutes);
