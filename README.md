@@ -14,7 +14,7 @@ Construisez une API sécurisée pour une application d'avis gastronomiques, prod
 
 Cloner le projet à partir de https://github.com/fgael/GaelFoini_6_13122021
 
-Frontend : Faire un cd ./frontend,
+Frontend: Faire un cd ./frontend,
 npm install,
 npm run start.
 
