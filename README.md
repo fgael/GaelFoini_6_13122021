@@ -18,7 +18,7 @@ Frontend : Faire un cd ./frontend,
 npm install,
 npm run start.
 
-Backend: Faire un cd./backend,
+Backend: Faire un cd ./backend,
 mkdir images,
 npm install,
 nodemon server.
