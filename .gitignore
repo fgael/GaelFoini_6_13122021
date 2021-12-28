@@ -1,0 +1,10 @@
+dart-sass
+tmp
+ressources
+node_modules
+images
+*.exe
+*.tmp
+*.map
+*.DS_Store
+*.git
